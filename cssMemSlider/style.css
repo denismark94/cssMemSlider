@@ -24,7 +24,6 @@ main {
 .memes img {
     position: relative;
     width: 99%;
-    height: 70vh;
     justify-self: center;
     border-radius: 5px;
 }
@@ -131,4 +130,13 @@ input {
 
 #meme4:checked ~ .controls > .label4 > .content{
     background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        position: relative;
+        top: -15px;
+        align-self: center;
+    }
+
 }
