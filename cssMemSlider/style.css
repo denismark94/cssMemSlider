@@ -1,0 +1,139 @@
+body {
+    background-color: gray;
+}
+
+main {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.memes {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.memes > div {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.memes img {
+    /* position: relative; */
+    width: 99%;
+    justify-self: center;
+    border-radius: 1%;
+}
+
+
+.memes > div > div {
+    transform: translateY(4vh);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-left: 1%;
+}
+
+.controls {
+    display: flex;
+    padding: 1%;
+    grid-template: "controls";
+    align-self: flex-end;
+    z-index: 2;
+}
+
+label:hover > .content {
+    background-color: white;
+    border-color: white;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+    width: 4vh;
+    height: 4vh;
+    background-color: transparent;
+}
+
+label > .content {
+    width: 2vh;
+    height: 2vh;
+    margin: 0.4vh;
+    background-color: lightblue;
+    border-radius: 50%;
+    border: 0.4vh solid lightblue;
+    padding: 0;
+}
+
+input {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#meme1:checked ~ .memes > .meme1 {
+    transform: translateX(0);
+    transition: 1s;
+}
+
+#meme1:checked ~ .memes > div {
+    transform: translateX(150%);
+    transition: 1s;
+}
+
+#meme1:checked ~ .controls > .label1 > .content  {
+    background-color: transparent;
+}
+
+#meme2:checked ~ .memes > .meme2 {
+    transform: translateX(-100%);
+    transition: 1s;
+}
+
+#meme2:checked ~ .memes > div {
+    transform: translateX(110%);
+    transition: 1s;
+}
+
+#meme2:checked ~ .controls > .label2 > .content  {
+    background-color: transparent;
+}
+
+#meme3:checked ~ .memes > .meme3 {
+    transform: translateX(-200%);
+    transition: 1s;
+}
+
+#meme3:checked ~ .memes > div {
+    transform: translateX(110%);
+    transition: 1s;
+}
+
+#meme3:checked ~ .controls > .label3 > .content{
+    background-color: transparent;
+}
+
+#meme4:checked ~ .memes > .meme4 {
+    transform: translateX(-300%);
+    transition: 1s;
+}
+
+#meme4:checked ~ .memes > div {
+    transform: translateX(110%);
+    transition: 1s;
+}
+
+#meme4:checked ~ .controls > .label4 > .content{
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        transform: translateY(-2.5vh);
+        align-self: center;
+    }
+
+}
